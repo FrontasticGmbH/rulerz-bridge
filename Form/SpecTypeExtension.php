@@ -12,7 +12,7 @@ class SpecTypeExtension extends AbstractTypeExtension
     /**
      * {@inheritDoc}
      */
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'spec_transformer' => 'string', // string, array, boolean
@@ -24,7 +24,7 @@ class SpecTypeExtension extends AbstractTypeExtension
     /**
      * {@inheritDoc}
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         if ($options['spec_class'] === null) {
             return;

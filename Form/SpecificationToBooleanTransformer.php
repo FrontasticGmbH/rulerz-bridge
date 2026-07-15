@@ -29,7 +29,7 @@ class SpecificationToBooleanTransformer implements DataTransformerInterface
      *
      * @return bool
      */
-    public function transform($specification)
+    public function transform($specification): mixed
     {
         if ($specification === null) {
             return false;
@@ -45,7 +45,7 @@ class SpecificationToBooleanTransformer implements DataTransformerInterface
      *
      * @return \RulerZ\Spec\Specification|null
      */
-    public function reverseTransform($boolean)
+    public function reverseTransform($boolean): mixed
     {
         if (!$boolean) {
             return null;
