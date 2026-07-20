@@ -22,7 +22,7 @@ class ValidRule extends Constraint
         $options = array_merge([
             'allowed_variables' => null,
             'allowed_operators' => null,
-        ], $options);
+        ], $options ?? []);
 
         if (is_array($options['allowed_operators'])) {
             $options['allowed_operators'] = array_map('strtolower', $options['allowed_operators']);
@@ -43,7 +43,7 @@ class ValidRule extends Constraint
         }
     }
 
-    public function getRequiredOptions()
+    public function getRequiredOptions(): array
     {
         return [
             'allowed_variables',
@@ -51,7 +51,7 @@ class ValidRule extends Constraint
         ];
     }
 
-    public function validatedBy()
+    public function validatedBy(): string
     {
         return 'rulerz_rule_validator';
     }

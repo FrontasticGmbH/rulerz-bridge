@@ -29,7 +29,7 @@ class SpecificationToStringTransformer implements DataTransformerInterface
      *
      * @return string
      */
-    public function transform($specification)
+    public function transform($specification): mixed
     {
         if ($specification === null) {
             return '';
@@ -45,7 +45,7 @@ class SpecificationToStringTransformer implements DataTransformerInterface
      *
      * @return \RulerZ\Spec\Specification|null
      */
-    public function reverseTransform($string)
+    public function reverseTransform($string): mixed
     {
         if ($string === null) {
             return null;

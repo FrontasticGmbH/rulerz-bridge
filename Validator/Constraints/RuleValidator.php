@@ -19,7 +19,7 @@ class RuleValidator extends ConstraintValidator
         $this->parser = $parser;
     }
 
-    public function validate($rule, Constraint $constraint)
+    public function validate($rule, Constraint $constraint): void
     {
         try {
             $model = $this->parser->parse($rule);
